@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <h1 class="text-center my-4">Press to get the weather in Lisbon</h1>
+            <section>
+                <div>
+                    <button 
+                        mat-flat-button color="primary"
+                        (click)="sendRequest()"
+                        >Fetch Data from Weather API
+                    </button>
+                    <mat-divider></mat-divider>
+                        <p>data from fetch('https://api.open-meteo.com/v1/forecast?latitude=38.72&longitude=-9.13&current_weather=true'):</p>
+                        <pre>
+                            <p>{{weatherData | json}}</p>
+                        </pre>
+                    <mat-divider></mat-divider>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
